@@ -4,11 +4,11 @@
 
 <table>
 <tr> 
-<td>Package</td><td>APPNAME</td>
+<td>Package</td><td>GooseStrap</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>DESCRIPTIONHERE</td>
+<td>bootstrap mongoose</td>
 </tr>
 <tr>
 <td>Node Version</td>
@@ -19,7 +19,18 @@
 ## Usage
 
 ```coffee-script
-NOTHING HERE YET
+goosestrap = require 'goosestrap'
+config =
+  db:
+    url: process.env.MONGODB or "mongodb://localhost/mydb"
+  paths:
+    models: 'path/to/models'
+
+db = goosestrap config
+
+User  = db.model 'User'  # model definied in /models
+Movie = db.model 'Movie' # model definied in /models
+
 ```
 
 ## LICENSE
