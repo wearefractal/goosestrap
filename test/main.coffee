@@ -4,10 +4,11 @@ config     = require './config/config'
 
 module.exports = 
 
-  "when goosestrap is initiated": =>
-    @db = goosestrap config
+  "it should connect": =>
+    goosestrap config.db.url, config.paths.models, (err, @db) =>
+      should.not.exist err
 
-  "it should connect to mongo": =>
+  "db should be an object": =>
     (typeof @db).should.equal 'object'
 
   "it should load all models": =>
