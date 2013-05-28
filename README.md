@@ -1,10 +1,10 @@
-![status](https://secure.travis-ci.org/wearefractal/APPNAME.png?branch=master)
+![status](https://secure.travis-ci.org/wearefractal/goosestrap.png?branch=master)
 
 ## Information
 
 <table>
 <tr> 
-<td>Package</td><td>GooseStrap</td>
+<td>Package</td><td>goosestrap</td>
 </tr>
 <tr>
 <td>Description</td>
@@ -24,12 +24,14 @@ config =
   db:
     url: process.env.MONGODB or "mongodb://localhost/mydb"
   paths:
-    models: 'path/to/models'
+    models: './server/models'
 
-db = goosestrap config
+goosestrap config.db.url, config.paths.models, (err, db) ->
 
-User  = db.model 'User'  # model definied in /models
-Movie = db.model 'Movie' # model definied in /models
+  User  = db.model 'User'  # model definied in ./server/models
+  Movie = db.model 'Movie' # model definied in ./server/models
+
+  ...
 
 ```
 
