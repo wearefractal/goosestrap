@@ -5,8 +5,7 @@ config     = require './config/config'
 module.exports = 
 
   "it should connect": =>
-    goosestrap config.db.url, config.paths.models, (err, @db) =>
-      should.not.exist err
+    @db = goosestrap config.db.url, config.paths.models
 
   "db should be an object": =>
     (typeof @db).should.equal 'object'

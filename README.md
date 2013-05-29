@@ -16,6 +16,8 @@
 </tr>
 </table>
 
+goosestrap is a simple model autoloader for mongoose.
+
 ## Install
 
 `npm install goosestrap`
@@ -24,18 +26,13 @@
 
 ```coffee-script
 goosestrap = require 'goosestrap'
-config =
-  db:
-    url: process.env.MONGODB or "mongodb://localhost/mydb"
-  paths:
-    models: './server/models'
 
-goosestrap config.db.url, config.paths.models, (err, db) ->
+db = goosestrap "mongodb://localhost/mydb", "./models"
 
-  User  = db.model 'User'  # model definied in ./server/models
-  Movie = db.model 'Movie' # model definied in ./server/models
+User  = db.model 'User'  # model definied in ./server/models
+Movie = db.model 'Movie' # model definied in ./server/models
 
-  ...
+...
 
 ```
 
