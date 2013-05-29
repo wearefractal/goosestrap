@@ -16,6 +16,10 @@
 </tr>
 </table>
 
+## Install
+
+`npm install goosestrap`
+
 ## Usage
 
 ```coffee-script
