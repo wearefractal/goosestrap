@@ -35,7 +35,7 @@ Movie = db.model 'Movie' # model definied in ./server/models
 
 ```
 
-goosestrap now supports globbing via node-glob:  
+goosestrap now supports globbing via [node-glob](https://github.com/isaacs/node-glob):  
 ```coffee-script
 
 db = goosestrap "mongodb://localhost/mydb", path.resolve "./models/**/*"
