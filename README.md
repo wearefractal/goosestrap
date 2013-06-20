@@ -26,13 +26,19 @@ goosestrap is a simple model autoloader for mongoose.
 
 ```coffee-script
 goosestrap = require 'goosestrap'
+path = require 'path'
 
-db = goosestrap "mongodb://localhost/mydb", "./models"
+db = goosestrap "mongodb://localhost/mydb", path.resolve "./models/*" # from project root
 
 User  = db.model 'User'  # model definied in ./server/models
 Movie = db.model 'Movie' # model definied in ./server/models
 
-...
+```
+
+goosestrap now supports globbing via node-glob:  
+```coffee-script
+
+db = goosestrap "mongodb://localhost/mydb", "./models/**/*"
 
 ```
 

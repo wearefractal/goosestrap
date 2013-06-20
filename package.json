@@ -1,31 +1,31 @@
 {
-   "name":"goosestrap",
-   "description":"bootstrap your mongoose",
-   "version":"0.0.2",
-   "homepage":"http://github.com/wearefractal/goosestrap",
-   "repository":"git://github.com/wearefractal/goosestrap.git",
-   "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
-   "main":"./index.js",
-   
-   "dependencies":{
-      "coffee-script":"*",
-      "require-dir":"*",
-      "mongoose":"*"
-   },
-   "devDependencies":{
-      "mocha":"*",
-      "should":"*"
-   },
-   "scripts":{
-      "test":"mocha --compilers coffee:coffee-script --ui exports"
-   },
-   "engines":{
-      "node":">= 0.4.0"
-   },
-   "licenses":[
-      {
-         "type":"MIT",
-         "url":"http://github.com/wearefractal/goosestrap/raw/master/LICENSE"
-      }
-   ]
+  "name": "goosestrap",
+  "description": "bootstrap your mongoose",
+  "version": "0.0.2",
+  "homepage": "http://github.com/wearefractal/goosestrap",
+  "repository": "git://github.com/wearefractal/goosestrap.git",
+  "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+  "main": "./index.js",
+  "dependencies": {
+    "coffee-script": "*",
+    "require-dir": "*",
+    "mongoose": "*",
+    "glob": "~3.2.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script --ui exports"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/wearefractal/goosestrap/raw/master/LICENSE"
+    }
+  ]
 }
