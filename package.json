@@ -17,7 +17,7 @@
     "should": "*"
   },
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script --ui exports"
+    "test": "mocha --compilers coffee:coffee-script/register --ui exports"
   },
   "engines": {
     "node": ">= 0.4.0"
