@@ -1,5 +1,4 @@
 mongoose   = require 'mongoose'
-requireDir = require 'require-dir'
 glob = require 'glob'
 path = require 'path'
 
