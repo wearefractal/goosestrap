@@ -1,7 +1,7 @@
 {
   "name": "goosestrap",
   "description": "bootstrap your mongoose",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "http://github.com/wearefractal/goosestrap",
   "repository": "git://github.com/wearefractal/goosestrap.git",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
