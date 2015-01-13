@@ -24,22 +24,16 @@ goosestrap is a simple model autoloader for mongoose.
 
 ## Usage
 
-```coffee-script
-goosestrap = require 'goosestrap'
-path = require 'path'
+goosestrap supports globbing via [node-glob](https://github.com/isaacs/node-glob): 
 
-db = goosestrap "mongodb://localhost/mydb", path.resolve "./models/*" # from project root
+```js
+var goosestrap = require('goosestrap');
+var path = require('path');
 
-User  = db.model 'User'  # model definied in ./server/models
-Movie = db.model 'Movie' # model definied in ./server/models
+var db = goosestrap("mongodb://localhost/mydb", path.resolve("./models/**/*"));
 
-```
-
-goosestrap now supports globbing via [node-glob](https://github.com/isaacs/node-glob):  
-```coffee-script
-
-db = goosestrap "mongodb://localhost/mydb", path.resolve "./models/**/*"
-
+var User = db.model('User');
+var Movie = db.model('Movie');
 ```
 
 ## LICENSE
