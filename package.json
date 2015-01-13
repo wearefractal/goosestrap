@@ -1,14 +1,14 @@
 {
   "name": "goosestrap",
   "description": "bootstrap your mongoose",
-  "version": "0.0.5",
+  "version": "0.0.4",
   "homepage": "http://github.com/wearefractal/goosestrap",
   "repository": "git://github.com/wearefractal/goosestrap.git",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
   "main": "./index.js",
   "dependencies": {
-    "glob": "^4.0.2",
-    "require-dir": "^0.1.0"
+    "require-dir": "^0.1.0",
+    "glob": "^4.0.2"
   },
   "peerDependencies": {
     "mongoose": "^3.8.11"
@@ -19,7 +19,7 @@
     "should": "^4.0.0"
   },
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register --ui exports"
+    "test": "mocha --compilers coffee:coffee-script/register --ui exports --reporter spec"
   },
   "engines": {
     "node": ">= 0.4.0"
