@@ -1,4 +1,4 @@
-mongoose   = require 'mongoose'
+mongoose = require 'mongoose'
 glob = require 'glob'
 path = require 'path'
 
